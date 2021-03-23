@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Mission to Mars</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+
+<body>
+
+  <div class="container-fluid">
+    <div class="jumbotron text-center">
+      <h1>Mission to Mars</h1>
+      <p><a class="btn btn-primary btn-lg" href="/scrape" role="button">Scrape New Data</a></p>
+    </div>
+  </div>
+
+  <div class="container"> 
+
+    <!-- First Row -->
+    <div class="row">
+
+      <!-- First (and only column) -->
+      <div class="col-md-12">
+        <h2>Latest Mars News</h2>
+        <h3>{{ mission.title }}</h3>
+        <p>{{ mission.paragraph }}</p>
+      </div>
+
+    </div>
+
+    <!-- Second Row -->
+    <div class="row">
+
+      <!--First of Two Columns-->
+      <div class="col-md-8">
+        <h2>Featured Mars Image</h2>
+        <img src="{{ mission.featured_image_url }}" alt="Featured">
+      </div>
+
+      <!--Second of Two Columns-->
+      <div class="col-md-4">
+        <h3>Mars Facts</h3>
+        <h4>{{ mission.html_table |safe }}</h4>
+      </div>
+
+    </div>
+
+    <!-- Third Row -->
+    <div class="row">
+
+      <!-- First (and only column) -->
+      <div class="col-md-12">
+        <h2 class="text-center">Mars Hemispheres</h2>
+      </div>
+
+    </div>
+  
+<!-- Mars Hemispheres -->
+   <!-- Fourth Row -->
+    <div class="row">
+
+      <!--First of Two Columns-->
+      <div class="col-md-6">
+        <img src="{{mission.hemisphere_image_urls[0]['img_url']}}/full.jpg" style="max-width:100%;
+        height:auto;" />
+        <h3 style="text-align:center">{{mission.hemisphere_image_urls[0]['title']}}</h3>
+      </div>
+
+      <!--Second of Two Columns-->
+      <div class="col-md-6">
+        <img src="{{mission.hemisphere_image_urls[1]['img_url']}}/full.jpg" style="max-width:100%;
+        height:auto;" />
+        <h3 style="text-align:center">{{mission.hemisphere_image_urls[1]['title']}}</h3>
+      </div>
+
+    </div>
+
+    <!-- Fifth Row -->
+    <div class="row">
+
+      <!--First of Two Columns-->
+      <div class="col-md-6">
+        <img src="{{mission.hemisphere_image_urls[2]['img_url']}}/full.jpg" style="max-width:100%;
+        height:auto;" />
+        <h3 style="text-align:center">{{mission.hemisphere_image_urls[2]['title']}}</h3>
+      </div>
+
+      <!--Second of Two Columns-->
+      <div class="col-md-6">
+        <img src="{{mission.hemisphere_image_urls[3]['img_url']}}/full.jpg" style="max-width:100%;
+        height:auto;" />
+        <h3 style="text-align:center">{{mission.hemisphere_image_urls[3]['title']}}</h3>
+      </div>
+
+    </div> 
+
+  
+</body>
+
+</html>
