@@ -36,9 +36,9 @@ I completed the scraping using Jupyter Notebook, BeautifulSoup, Pandas, and Requ
 
 * Appended the dictionary with the image url string and the hemisphere title to a list. 
 
-## Part 2 - MongoDB and Flask Applicationd
+## Part 2 - MongoDB and Flask Application
 
-Used MongoDB with Flask templating to create a new HTML paged that displays all of the informathaies thescraped from the URLs above.
+I used MongoDB with Flask templating to create a new HTML paged that displays the information scraped from the URLs above.
 
 * Converted the Jupyter notebook into a Python script called `scrape_mars.py` with a function called `scrape` that executes all of the scraping code from above and return one Python dictionary containing all of the scraped data.
 
